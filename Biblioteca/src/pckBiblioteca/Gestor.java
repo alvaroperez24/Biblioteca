@@ -1,10 +1,13 @@
 package pckBiblioteca;
 
+import java.util.ArrayList;
+
 public class Gestor extends Persona {
 	
-	private Libro libro;
 	private float descuento = 0.25f;
 	private String nrp = "";
+	
+	ArrayList <Libro> cesta = new ArrayList<>();
 	
 	
 	public Gestor(String nom, String apell1, String apell2, String correo, String contraseña, String direccion) {
@@ -15,14 +18,6 @@ public class Gestor extends Persona {
 	public Gestor(String nom) {
 		super(nom);
 
-	}
-
-	public Libro getLibro() {
-		return libro;
-	}
-
-	public void setLibro(Libro libro) {
-		this.libro = libro;
 	}
 
 	public float getDescuento() {
@@ -42,8 +37,8 @@ public class Gestor extends Persona {
 	}
 	*/
 	
-	public void anyadirLibro() {
-		
+	public void anyadirLibro(Biblioteca biblioteca ,Libro libro) {
+		biblioteca.getCatalogo().add(libro);
 	}
 	
 	public void eliminarLibro() {

@@ -1,8 +1,10 @@
 package pckBiblioteca;
 
+import java.util.*;
+
 public class Cliente extends Persona {
-	
-	private Libro libro;
+		
+	ArrayList <Libro> cesta = new ArrayList<>();
 	
 	public Cliente(String nom, String apell1, String apell2, String correo, String contraseña, String direccion) {
 		super(nom, apell1, apell2, correo, contraseña, direccion);
@@ -13,15 +15,6 @@ public class Cliente extends Persona {
 		super(nom);
 
 	}	
-
-	public Libro getLibro() {
-		return libro;
-	}
-
-	public void setLibro(Libro libro) {
-		this.libro = libro;
-	}
-	
 
 	public void buscarLibro(){
 		

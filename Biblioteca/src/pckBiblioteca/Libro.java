@@ -2,36 +2,39 @@ package pckBiblioteca;
 
 public class Libro {
 	
-	private String nomLibro = "";
+	private String titulo = "";
 	private String codLibro = "";
 	private String autor = "";
 	private String tematica = "";
+	private float precio;
 	
-	public Libro(String nomLibro, String codLibro) {
+	public Libro(String titulo, String codLibro, float precio) {
 		super();
-		this.nomLibro = nomLibro;
+		this.titulo = titulo;
 		this.codLibro = codLibro;
+		this.precio = precio;
 	}
 
 
-	public Libro(String nomLibro, String codLibro, String autor, String tematica) {
+	public Libro(String titulo, String codLibro, String autor, String tematica, float precio) {
 		super();
-		this.nomLibro = nomLibro;
+		this.titulo = titulo;
 		this.codLibro = codLibro;
 		this.autor = autor;
 		this.tematica = tematica;
+		this.precio = precio;
 	}
 
 
 
 	public String getNomLibro() {
-		return nomLibro;
+		return titulo;
 	}
 
 
 	
 	public void setNomLibro(String nomLibro) {
-		this.nomLibro = nomLibro;
+		this.titulo = nomLibro;
 	}
 
 
@@ -68,6 +71,16 @@ public class Libro {
 
 	public void setTematica(String tematica) {
 		this.tematica = tematica;
+	}
+
+
+	public float getPrecio() {
+		return precio;
+	}
+
+
+	public void setPrecio(float precio) {
+		this.precio = precio;
 	}
 
 }
