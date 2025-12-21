@@ -1,7 +1,5 @@
 package pckBiblioteca;
 
-import java.util.Objects;
-
 public class Libro {
 	
 	private String nomLibro = "";
@@ -72,36 +70,4 @@ public class Libro {
 		this.tematica = tematica;
 	}
 
-
-
-	@Override
-	public String toString() {
-		return "Libro [nomLibro=" + nomLibro + ", codLibro=" + codLibro + ", autor=" + autor + ", tematica=" + tematica
-				+ "]";
-	}
-
-
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(autor, codLibro, nomLibro, tematica);
-	}
-
-
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Libro other = (Libro) obj;
-		return Objects.equals(autor, other.autor) && Objects.equals(codLibro, other.codLibro)
-				&& Objects.equals(nomLibro, other.nomLibro) && Objects.equals(tematica, other.tematica);
-	}
-	
-	
-	
 }

@@ -17,6 +17,31 @@ public class Gestor extends Persona {
 
 	}
 
+	public Libro getLibro() {
+		return libro;
+	}
+
+	public void setLibro(Libro libro) {
+		this.libro = libro;
+	}
+
+	public float getDescuento() {
+		return descuento;
+	}
+
+	public void setDescuento(float descuento) {
+		this.descuento = descuento;
+	}
+
+	public String getNrp() {
+		return nrp;
+	}
+	/*
+	public void setNrp(String nrp) {
+		this.nrp = nrp;
+	}
+	*/
+	
 	public void anyadirLibro() {
 		
 	}
@@ -24,6 +49,7 @@ public class Gestor extends Persona {
 	public void eliminarLibro() {
 		
 	}
+	
 	
 	public void buscarLibro() {
 		

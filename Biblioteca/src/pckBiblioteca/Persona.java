@@ -85,5 +85,7 @@ public class Persona {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+	
+	
 		
 }
