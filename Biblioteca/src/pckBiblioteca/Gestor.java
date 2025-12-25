@@ -38,11 +38,19 @@ public class Gestor extends Persona {
 	*/
 	
 	public void anyadirLibro(Biblioteca biblioteca ,Libro libro) {
+		System.out.println("El libro " + libro + " ha sido añadido a tu cesta.");
 		biblioteca.getCatalogo().add(libro);
 	}
 	
-	public void eliminarLibro() {
-		
+	public void eliminarLibro(Biblioteca biblioteca, String isbn) {
+		for (int i = 0; i < cesta.size(); i++) {
+			if (isbn == biblioteca.getCatalogo().get(i).getIsbn()) {
+				System.out.println("El libro " + biblioteca.getCatalogo().get(i) + " ha sido eliminado de la biblioteca.");
+				biblioteca.getCatalogo().remove(i);
+			} else {
+				System.out.println("Ese libro no existe en nuestra biblioteca por lo que no se ha eliminado nada.");
+			}
+		}
 	}
 	
 	
@@ -50,12 +58,26 @@ public class Gestor extends Persona {
 		
 	}
 	
-	public void anayadirLibroCesta() {
-		
+	public void anayadirLibroCesta(Biblioteca biblioteca, String nomLibro) {
+		for (int i = 0; i < biblioteca.getCatalogo().size(); i++) {
+			if (nomLibro == biblioteca.getCatalogo().get(i).getNomLibro()) {
+				System.out.println("El libro " + nomLibro + " ha sido añadido a tu cesta.");
+				cesta.add(biblioteca.getCatalogo().get(i));
+			} else {
+				System.out.println("Ese libro no existe o no lo tenemos en la biblioteca. Tienes la herramienta buscar para encontrar los libros que tenemos.");
+			}
+		}
 	}
 	
-	public void eliminarLibroCesta() {
-		
+	public void eliminarLibroCesta(Biblioteca biblioteca, String nomLibro) {
+		for (int i = 0; i < biblioteca.getCatalogo().size(); i++) {
+			if (nomLibro == biblioteca.getCatalogo().get(i).getNomLibro()) {
+				System.out.println("El libro " + nomLibro + " ha sido añadido a tu cesta.");
+				cesta.remove(biblioteca.getCatalogo().get(i));
+			} else {
+				System.out.println("El libro seleccionado no esta en tu cesta.");
+			}
+		}
 	}
 	
 	public void comprar() {
