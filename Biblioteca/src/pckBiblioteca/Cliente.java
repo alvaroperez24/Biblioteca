@@ -16,8 +16,10 @@ public class Cliente extends Persona {
 
 	}	
 
-	public void buscarLibro(){
-		
+	public void buscarLibro(Biblioteca biblioteca, String buscador){
+		for (int i = 0; i < biblioteca.getCatalogo().size(); i++) {
+			
+		}
 	}
 	
 	public void anayadirLibroCesta(Biblioteca biblioteca, String nomLibro) {
@@ -43,7 +45,13 @@ public class Cliente extends Persona {
 	}
 	
 	public void comprar() {
-		
+		float precioFinal = 0;
+		System.out.println("Esta es tu cesta actual.");
+		for (int i = 0; i < cesta.size(); i++) {
+			System.out.println(cesta.get(i));
+			precioFinal = precioFinal + cesta.get(i).getPrecio();
+		}
+		System.out.println("El precio total de tu cesta es de: " + precioFinal);
 	}
 	
 }
